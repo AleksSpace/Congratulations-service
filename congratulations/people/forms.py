@@ -1,5 +1,3 @@
-from socket import fromshare
-
 from django import forms
 from people.models import Congratulation, People
 

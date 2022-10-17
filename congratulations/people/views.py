@@ -1,12 +1,8 @@
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
                                   UpdateView)
 from people.forms import CongratulationForm, PeopleForm
 from people.models import Congratulation, People
-
-# from django.http import HttpResponse
-
 
 
 class CongratulationListView(ListView):
