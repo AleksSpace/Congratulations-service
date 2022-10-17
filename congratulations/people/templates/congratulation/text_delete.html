@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Поздравления{% endblock %}
+{% block content %}
+<div class="container py-3">
+  <div class="card text-center">
+    <form method="post">{% csrf_token %}
+      <div class="card-header">
+        Вы действительно хотите удалить текст:
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ text_item }}</p>
+        {{ form }}
+        <input type="submit" value="Удалить">
+      </div>
+    </form>
+  </div>
+</div>
+<br>
+{% endblock %}

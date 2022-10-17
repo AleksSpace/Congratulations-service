@@ -1,0 +1,11 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav w-100 justify-content-center">
+        <a class="nav-item nav-link active" href="{% url 'people' %}">Сотрудники</a>
+        <a class="nav-item nav-link active" href="{% url 'text' %}">Тексты поздравлений</a>
+        <a class="nav-item nav-link active" href="{% url 'add_text' %}">Добавить поздравление</a>
+        <a class="nav-item nav-link active" href="{% url 'add_people' %}">Добавить сотрудника</a>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Новое поздравление{% endblock %}
+{% block content %}
+    <div class="container py-5">
+        <div class="row justify-content-center py-5">
+            <div class="col text-center py-5">
+                <h1>Напишите новое поздравление</h1>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {% for field in form %}
+                    <div class="form-group py-5">
+                        {{ field }}
+                    </div>
+                    {% endfor %}
+                    <div class="form-group d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-block">Сохранить поздравление</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

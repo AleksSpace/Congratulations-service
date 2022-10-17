@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Новый сотрудник{% endblock %}
+{% block content %}
+    <div class="container py-5">
+        <div class="row justify-content-center py-5">
+            <div class="col text-center py-5">
+                <h1>Напините данные о новом сотруднике</h1>
+                <form action="" method="POST" class="py-5">
+                    {% csrf_token %}
+                    {% comment %} {% for field in form %}
+                    <div class="form-group py-2">
+                        {{ field }}
+                    </div>
+                    {% endfor %} {% endcomment %}
+                    <label class="py-3">Выберите пол сотрудника: </label>
+                    {{ form.gender }}
+                    <label class="py-3">Напишите фамилию сотрудника: </label>
+                    {{ form.last_name }}
+                    <label class="py-3">Напишите имя сотрудника: </label>
+                    {{ form.first_name }}
+                    <label class="py-3">Напишите отчество сотрудника: </label>
+                    {{ form.patronymic }}
+                    <div class="form-group d-grid gap-2 py-5">
+                        <button type="submit" class="btn btn-primary btn-block">Сохранить сотрудника</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

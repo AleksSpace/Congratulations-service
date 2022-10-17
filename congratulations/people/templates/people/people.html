@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Сотрудники{% endblock %}
+{% block content %}
+  <div class="container py-5">
+    {% for man in people %}
+    <div class="card text-center">
+        <div class="card-header">
+          Сотрудник:
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ man.last_name }}</h5>
+          <p class="card-text">{{ man.first_name }} {{ man.patronymic }}</p>
+          <p class="card-text">Пол: {{ man.gender }}</p>
+          <a href="{% url 'download' pk=man.id %}" class="btn btn-primary">Скачать поздравление</a>
+          <a href="{% url 'people_update' pk=man.id %}" class="btn btn-success">Изменить</a>
+          <a href="{% url 'people_delete' pk=man.id %}" class="btn btn-danger">Удалить</a>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
+  </div>
+{% endblock %}

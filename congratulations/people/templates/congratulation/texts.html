@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Поздравления{% endblock %}
+{% block content %}
+{% for text in texts %}
+<div class="container py-3">
+  <div class="card text-center">
+      <div class="card-header">
+        Поздравление:
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{ text }}</p>
+        <a href="{% url 'text_detail' pk=text.id %}" class="btn btn-success">Посмотреть подробнее</a>
+      </div>
+  </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}
