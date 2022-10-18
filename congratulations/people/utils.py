@@ -13,7 +13,6 @@ def randon_congratulation():
     из тех что есть в базе"""
     congratulation = Congratulation.objects.all()
     rundom_congratulation = random.choice(congratulation)
-    # rundom_congratulation_str = str(rundom_congratulation)
 
     return str(rundom_congratulation)
 
