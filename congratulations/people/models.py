@@ -10,7 +10,10 @@ GENDER = (
 
 
 class People(models.Model):
-    gender = models.CharField(max_length=9, choices=GENDER, default='Женский', verbose_name='Пол')
+    gender = models.CharField(max_length=9,
+                              choices=GENDER,
+                              default='Женский',
+                              verbose_name='Пол')
     last_name = models.CharField(max_length=50, verbose_name='Фамилия')
     first_name = models.CharField(max_length=50, verbose_name='Имя')
     patronymic = models.CharField(max_length=50, verbose_name='Отчество')

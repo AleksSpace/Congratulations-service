@@ -13,13 +13,17 @@ class PeopleForm(forms.ModelForm):
         model = People
         fields = ('gender', 'last_name', 'first_name', 'patronymic')
         widgets = {
-            'gender': forms.Select(choices=CHOICES, attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control',
-                                                'placeholder': 'Напишите фамилию сотрудника'}),
-            'first_name': forms.TextInput(attrs={'class': 'form-control',
-                                                'placeholder': 'Напишите имя сотрудника'}),
-            'patronymic': forms.TextInput(attrs={'class': 'form-control',
-                                                'placeholder': 'Напишите отчество сотрудника'}),
+            'gender': forms.Select(choices=CHOICES,
+                                   attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(
+                attrs={'class': 'form-control',
+                       'placeholder': 'Напишите фамилию сотрудника'}),
+            'first_name': forms.TextInput(
+                attrs={'class': 'form-control',
+                       'placeholder': 'Напишите имя сотрудника'}),
+            'patronymic': forms.TextInput(
+                attrs={'class': 'form-control',
+                       'placeholder': 'Напишите отчество сотрудника'}),
         }
 
 
