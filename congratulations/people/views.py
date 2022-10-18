@@ -72,19 +72,3 @@ class DeletePeopleView(DeleteView):
     context_object_name = 'people_item'
     success_url = reverse_lazy('people')
     template_name = 'people/people_delete.html'
-
-
-# class DownloadCongratulations():
-
-#     def download_text(self, request):
-#         response = HttpResponse(content_type='text/plain')
-#         response['Content-Disposition'] = 'attachment; filename="Поздравление.docs"'
-
-#         lines = [
-#             "test print text 1\n",
-#             "test print text 2\n",
-#             "test print text 3\n",
-#         ]
-
-#         response.writelines(lines)
-#         return response
